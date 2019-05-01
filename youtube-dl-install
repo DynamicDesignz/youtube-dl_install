@@ -25,4 +25,5 @@ echo "Changed permissions for /usr/local/bin/youtube-dl "
 sudo chmod a+rx /usr/local/bin/youtube-dl
 
 echo "Copy ytdl interface script to /usr/local/bin and change permissions"
-wget -O https://github.com/DynamicDesignz/youtube-dl_install/ytdl /usr/local/bin/ytdl && sudo chmod +x /usr/local/bin/ytdl
+cp ytdl && sudo chmod +x /usr/local/bin/ytdl
+ 
