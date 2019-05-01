@@ -25,5 +25,5 @@ echo "Changed permissions for /usr/local/bin/youtube-dl "
 sudo chmod a+rx /usr/local/bin/youtube-dl
 
 echo "Copy ytdl interface script to /usr/local/bin and change permissions"
-cp ytdl && sudo chmod +x /usr/local/bin/ytdl
+mv ytdl /usr/local/bin/ytdl && sudo chmod +x /usr/local/bin/ytdl
  
