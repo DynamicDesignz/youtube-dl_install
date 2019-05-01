@@ -1,0 +1,28 @@
+#!/bin/bash
+echo "==========================="
+echo "   Youtube-DL Install      "
+echo " Script By: Jeremy Engram  "
+echo "==========================="
+echo
+echo "The following script will install a working version of youtube-dl tested on Ubuntu 18.4LTS..." 
+echo
+
+sleep 2
+
+echo "Add Greatramer Repository?..."
+sudo add-apt-repository ppa:gstreamer
+
+echo "Installing Gstreamer..."
+sudo apt-get install gstreamer
+
+echo "Installing ffmpeg..."
+sudo apt-get install -y ffmpeg
+
+echo "Wget Working Version Of Youtube-DL To Usr Local Bin"
+sudo wget https://yt-dl.org/downloads/latest/youtube-dl -O /usr/local/bin/youtube-dl
+
+echo "Changed permissions for /usr/local/bin/youtube-dl "
+sudo chmod a+rx /usr/local/bin/youtube-dl
+
+echo "Copy ytdl interface script to /usr/local/bin and change permissions"
+wget -O https://github.com/DynamicDesignz/youtube-dl_install/ytdl /usr/local/bin/ytdl && sudo chmod +x /usr/local/bin/ytdl
